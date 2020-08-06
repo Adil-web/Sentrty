@@ -10,35 +10,12 @@ sentry_sdk.init(dsn=SENTRY_DSN, integrations=[BottleIntegration()])
 
 @route("/")
 def index():
-    return """
-<!doctype html>
-<html lang="en">
-  <head>
-    <title>server success/fail</title>
-  </head>
-  <body>
-    <div class="container">
-      <p class="small">Запросы можно отправлять на /success и /fail</p>
-    </div>
-  </body>
-</html>"""
+    return "Запросы можно отправлять на /success и /fail"
 
 
 @route('/success')  
 def index():  
-    return """
-<!doctype html>
-<html lang="en">
-  <head>
-    <title>server success/fail</title>
-  </head>
-  <body>
-    <div class="container">
-      <p class="small">success</p>
-    </div>
-  </body>
-</html>
-"""
+    return "success"
 
 @route('/fail')  
 def index():  
